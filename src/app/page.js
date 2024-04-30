@@ -1,10 +1,6 @@
 import { Suspense } from "react"
 import LoginPage from "./login/page.js";
 
-export const metadata = {
-  title: 'Next.js',
-}
-
 function HomePage() {
   return (
     <>

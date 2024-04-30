@@ -21,6 +21,9 @@ function LoginPage() {
     const storedSignupData = JSON.parse(localStorage.getItem('signups'));
     const matchedUser = storedSignupData.find(user => user.firstName === loginData.uname && user.password === loginData.pwd);
     if (matchedUser) {
+    // Set logged-in status in localStorage
+    localStorage.setItem('isUserLogged', true);
+
     toast.success('Login successful!', {
       position: 'top-right',
       autoClose: 1000,
